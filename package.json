@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "description": "TadbeerGo Multi-Platform App for Android, iOS, Windows, macOS and Linux",
   "main": "electron/main.js",
-  "author": "TadbeerGo",
+  "author": "TadbeerGo <info@tadbeergo.vercel.app>",
   "license": "MIT",
   "scripts": {
     "start": "electron .",
     "cap:sync": "cap sync",
     "desktop:pack": "electron-builder --dir",
-    "desktop:dist": "electron-builder",
-    "desktop:dist:mac": "electron-builder --mac",
-    "desktop:dist:win": "electron-builder --win",
-    "desktop:dist:linux": "electron-builder --linux"
+    "desktop:dist": "electron-builder --publish never",
+    "desktop:dist:mac": "electron-builder --mac --publish never",
+    "desktop:dist:win": "electron-builder --win --publish never",
+    "desktop:dist:linux": "electron-builder --linux --publish never"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.2",
@@ -27,6 +27,7 @@
   "build": {
     "appId": "app.tadbeergo.desktop",
     "productName": "TadbeerGo",
+    "publish": null,
     "directories": {
       "output": "dist-desktop"
     },
@@ -53,6 +54,7 @@
       "icon": "icon.ico"
     },
     "linux": {
+      "maintainer": "info@tadbeergo.vercel.app",
       "target": [
         "AppImage",
         "deb"
