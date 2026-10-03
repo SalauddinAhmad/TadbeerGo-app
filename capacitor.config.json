@@ -1,0 +1,24 @@
+{
+  "appId": "app.tadbeergo.mobile",
+  "appName": "TadbeerGo",
+  "webDir": "www",
+  "server": {
+    "url": "https://tadbeergo.vercel.app",
+    "cleartext": true,
+    "allowNavigation": [
+      "tadbeergo.vercel.app",
+      "*.vercel.app",
+      "*.supabase.co",
+      "*.google.com",
+      "*.googleapis.com"
+    ]
+  },
+  "android": {
+    "allowMixedContent": true,
+    "backgroundColor": "#063F35"
+  },
+  "ios": {
+    "backgroundColor": "#063F35",
+    "contentInset": "always"
+  }
+}
